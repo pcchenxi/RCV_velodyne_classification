@@ -1,0 +1,22 @@
+Sub program:
+1. cloud_raw_processor: transform and cut input Velodyne point cloud based on required size. Coordinate transform, Filtering
+	Input: 		Velodyne point cloud		Required size
+	Output:		Filtered Velodyne point
+
+2. clout_image_convertor: convertor point cloud data in to 2D open cv Mat image.	
+	Input:		Point cloud
+	Output: 	OpenCV Mat 32_S gray scale image of mean_height, diff_height, point_num, 
+
+3. image_based_processor:
+	Input:		Images
+	Output: 	Image of flat area
+
+
+
+
+/// OpenCV Image Type convert
+http://stackoverflow.com/questions/15332163/opencv-convert-a-cv-8uc3-image-to-a-cv-32s1-image-in-c
+
+git clone -b indigo_devel https://github.com/ethz-asl/ethzasl_icp_mapping.git
+git clone -b release/indigo/libnabo https://github.com/ethz-asl/libnabo-release.git
+git clone -b release/indigo/libpointmatcher https://github.com/ethz-asl/libpointmatcher-release.git
